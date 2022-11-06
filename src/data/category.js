@@ -1,0 +1,39 @@
+const categories = [
+    {
+        id:1,
+        name:'BURGER',
+        status:'active'
+    },
+    {
+        id:2,
+        name:'SANDWICH',
+        status:'active'
+    },
+    {
+        id:3,
+        name:'PLATTER',
+        status:'active'
+    },
+    {
+        id:4,
+        name:'SOUP',
+        status:'active'
+    },
+    {
+        id:5,
+        name:'PIZZA',
+        status:'active'
+    },
+    {
+        id:6,
+        name:'NOODLES',
+        status:'active'
+    },
+    {
+        id:7,
+        name:'RICE',
+        status:'active'
+    },
+]
+
+export default categories;
