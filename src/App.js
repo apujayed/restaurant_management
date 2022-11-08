@@ -1,9 +1,9 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import Nav from "./components/Nav";
-import Cart from "./containers/Cart";
-import Products from "./containers/Products";
-import FoodMenu from "./containers/FoodMenu";
+// import Nav from "./components/Nav";
+// import Cart from "./containers/Cart";
+// import Products from "./containers/Products";
+// import FoodMenu from "./containers/FoodMenu";
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing:border-box;
@@ -21,9 +21,7 @@ export default function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Nav />
-      <FoodMenu />
-      <Cart />
+
     </div>
   );
 }
