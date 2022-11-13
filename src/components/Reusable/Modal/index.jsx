@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 import { Modal as ReUseModal, Box } from "@mui/material";
-
+import React from "react";
 const style = {
   position: "absolute",
   top: "50%",

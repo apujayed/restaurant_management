@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Controller } from "react-hook-form";
-// import { ErrorMessages } from "Components/Reusable";
+import React from "react";
 import { TextField } from "@mui/material";
 /**
  *@function HookFormTextField.jsx
@@ -21,6 +21,7 @@ const HookFormTextField = ({
   type,
   errors,
   InputProps,
+  ...rest
 }) => {
   return (
     <Fragment>
@@ -44,6 +45,7 @@ const HookFormTextField = ({
             size={size ? size : "medium"}
             fullWidth
             style={style}
+            {...rest}
             rows={rows}
             multiline={type === "date" || type === "number" ? false : true}
             autoComplete={type === "password" ? "true" : "false"}

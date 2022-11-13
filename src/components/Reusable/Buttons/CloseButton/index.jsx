@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-
+import React from "react";
 /**
  *@function CloseButton.jsx
  *@author Azim
