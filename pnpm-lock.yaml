@@ -13,6 +13,7 @@ specifiers:
   react-animations: 1.0.0
   react-dom: 17.0.0
   react-elastic-carousel: ^0.11.5
+  react-hook-form: ^7.39.3
   react-redux: ^8.0.4
   react-router-dom: ^6.4.3
   react-scripts: 3.4.3
@@ -34,6 +35,7 @@ dependencies:
   react-animations: 1.0.0
   react-dom: 17.0.0_react@17.0.1
   react-elastic-carousel: 0.11.5_tu4ntx7bysz2coeca2jp3jcmnq
+  react-hook-form: 7.39.3_react@17.0.1
   react-redux: 8.0.5_l5bjqu5bpzmzwxnqdqomf7kqhy
   react-router-dom: 6.4.3_l5bjqu5bpzmzwxnqdqomf7kqhy
   react-scripts: 3.4.3_wlof3usj5zalkhvwtojk4sjxhq
@@ -9954,6 +9956,15 @@ packages:
 
   /react-error-overlay/6.0.11:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==}
+    dev: false
+
+  /react-hook-form/7.39.3_react@17.0.1:
+    resolution: {integrity: sha512-H/vwk1vBf+TiXuyW6+hWz+zCujiDO6NqHlN5sPE/a+NGKKGK95XTM65DZz3NmEgs2M20Wka+g4uv4VD367wDBA==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 17.0.1
     dev: false
 
   /react-is/16.13.1:
