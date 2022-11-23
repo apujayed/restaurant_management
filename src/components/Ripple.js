@@ -1,6 +1,5 @@
 import React, { useState, useLayoutEffect } from "react";
 import { RippleContainer } from "./Ripple.styled";
-import PropTypes from "prop-types";
 
 const useDebouncedRippleCleanUp = (rippleCount, duration, cleanUpFunction) => {
   useLayoutEffect(() => {
@@ -63,10 +62,7 @@ const Ripple = props => {
   );
 };
 
-Ripple.propTypes = {
-  duration: PropTypes.number,
-  color: PropTypes.string
-};
+
 
 Ripple.defaultProps = {
   duration: 850,
