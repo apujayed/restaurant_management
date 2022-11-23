@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import "../food.css";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../store/cartSlice";
-import { fetchProducts } from "../store/productsSlice";
 import banner from "../images/banner.png";
 import FilterMenu from "../components/FilterMenu";
 import FoodItemContainer from "./FoodItemContainer";
 import CartFood from "./CartFood";
 import Footer from "../components/Footer";
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
 const FoodMenu = () => {
 
 
@@ -26,7 +25,13 @@ const FoodMenu = () => {
   }, []);
   return (
     <>
-      <img src={banner} class="img-fluid banner" alt="Responsive image" />
+    <AliceCarousel autoPlay autoPlayInterval="1500" infinite disableDotsControls disableButtonsControls>
+      <img src={banner} className="sliderimg"/>
+      <img src={banner} className="sliderimg"/>
+      <img src={banner} className="sliderimg"/>
+      <img src={banner} className="sliderimg"/>
+</AliceCarousel>
+      {/* <img src={banner} class="img-fluid banner" alt="Responsive image" /> */}
         <div className="food-body">
         
           <FilterMenu />

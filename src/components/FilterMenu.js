@@ -1,11 +1,15 @@
-import React from "react";
+import React,{useState} from "react";
 import categories from "../data/category";
 import { filterfood } from "../store/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
 const FilterMenu = () => {
   const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
-    
+    const [activeclass, setActiveClass] = useState();
+    const handleItemClick = (i) => {
+      // this will trigger a rerender
+      setActiveClass(i)
+      }
   return (
     <>
       <div className="row">
@@ -17,11 +21,10 @@ const FilterMenu = () => {
             <div id="sidescrl" class="slideouter">
               <div class="slideinner srcl">
                 <ul>
-                <li  onClick={()=>dispatch(filterfood('ALL'))} className="list" >ALL</li>
                  {
-                    categories.map((category)=>{
+                    categories.map((category,i)=>{
                         return(
-                            <li  key = {category.id}  onClick={()=>dispatch(filterfood(category.name))} className="list" >{category.name}</li>
+                            <li  key = {category.id} className={activeclass === i ? "active" : "list" }  onClick={()=>{dispatch(filterfood(category.name)); handleItemClick(i)}} >{category.name}</li>
                         )
                     })
                  }
