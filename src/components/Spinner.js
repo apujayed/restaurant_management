@@ -3,9 +3,12 @@ import React from 'react'
 const Spinner = () => {
   return (
     <>
-    <div class="spinner-border  d-flex align-items-center justify-content-center" role="status">
+    <div className='spin-cont'>
+    <div class="spin spinner-border " role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
+    </div>
+   
     </>
   )
 }

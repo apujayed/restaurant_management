@@ -7,7 +7,8 @@ const _products = [
     price: 550,
     currency: "BDT",
     category: "BURGER",
-    time:"30"
+    time:"30",
+    ingredients:"Letus,Bun,Onion,Chese,Mustard"
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ const _products = [
     price: 470,
     currency: "BDT",
     category: "PIZZA",
-    time:"30"
+    time:"30",
+    ingredients:"Letus,Bun,Onion,Chese,Mustard"
   },
   {
     id: 3,
@@ -27,7 +29,8 @@ const _products = [
     price: 220,
     currency: "BDT",
     category: "PLATTER",
-    time:"30"
+    time:"30",
+    ingredients:"Letus,Bun,Onion,Chese,Mustard"
   },
   {
     id: 4,
@@ -37,7 +40,8 @@ const _products = [
     price: 352,
     currency: "BDT",
     category: "PLATTER",
-    time:"30"
+    time:"30",
+    ingredients:"Letus,Bun,Onion,Chese,Mustard"
   },
   {
     id: 5,
@@ -47,7 +51,8 @@ const _products = [
     price: 352,
     currency: "BDT",
     category: "RICE",
-    time:"30"
+    time:"30",
+    ingredients:"Letus,Bun,Onion,Chese,Mustard"
   },
   
 ];

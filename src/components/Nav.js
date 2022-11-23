@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import styled, { keyframes } from "styled-components";
 import animation from "react-animations/lib/swing";
 import { primaryColor } from "../containers/Products";
-import { cartTotalSelector } from "../store/selectors";
+// import { cartTotalSelector } from "../store/selectors";
 import { toggle } from "../store/uiSlice";
 import logo from "../images/logo.png"
 const styledAnimation = keyframes`${animation}`;
@@ -55,19 +55,19 @@ const Bubble = styled.div`
 `;
 
 const Nav = () => {
-  const total = useSelector(cartTotalSelector);
+  // const total = useSelector(cartTotalSelector);
   const dispatch = useDispatch();
   const [change, setChange] = useState(false);
 
-  useEffect(() => {
-    if (total !== 0) {
-      setChange(true);
+  // useEffect(() => {
+  //   if (total !== 0) {
+  //     setChange(true);
 
-      setTimeout(() => {
-        setChange(false);
-      }, 1000);
-    }
-  }, [total]);
+  //     setTimeout(() => {
+  //       setChange(false);
+  //     }, 1000);
+  //   }
+  // }, [total]);
 
   return (
     <NavContainer>
@@ -80,7 +80,7 @@ const Nav = () => {
           dispatch(toggle());
         }}
       >
-        <Bubble change={change}>{total}</Bubble>
+        {/* <Bubble change={change}>{total}</Bubble> */}
         <svg
           t="1606123426950"
           viewBox="0 0 1024 1024"
