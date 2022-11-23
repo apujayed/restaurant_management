@@ -1,32 +1,38 @@
-import React ,{useState}from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggle } from "../store/uiSlice";
-import {addOrder,getTodoAsync, increament, decrement, clear ,deletecart} from "../store/cartSlice";
+import {
+  addOrder,
+  getTodoAsync,
+  increament,
+  decrement,
+  clear,
+  deletecart,
+} from "../store/cartSlice";
 // import { cartTotalPriceSelector } from "../store/selectors";
 const CartFood = () => {
   const cart = useSelector((state) => state.cart.cart_data);
   const ui = useSelector((state) => state.ui);
   const dispatch = useDispatch();
   // const totalPrice = useSelector(cartTotalPriceSelector);
- const [userDetail, setUserdetail] = useState({
-  name: "",
-  phone: "",
-  table_id: "",
-});
+  const [userDetail, setUserdetail] = useState({
+    name: "",
+    phone: "",
+    table_id: "",
+  });
 
-let name, value;
-const getUserData = (event) => {
-  name = event.target.name;
-  value = event.target.value;
-  setUserdetail({ ...userDetail, [name]: value });
-};
+  let name, value;
+  const getUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value;
+    setUserdetail({ ...userDetail, [name]: value });
+  };
 
   return (
     <>
-     
       <div className="col-lg-4 col-xs-4 col-12">
-      {/* <button onClick={() => dispatch(getTodoAsync())}>GET TODO</button> */}
-   
+        {/* <button onClick={() => dispatch(getTodoAsync())}>GET TODO</button> */}
+
         <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
           <div className="">
             <div className="row d-flex justify-content-center align-items-center h-100">
@@ -115,7 +121,6 @@ const getUserData = (event) => {
                                         class="btn btn-link px-2"
                                         onClick={() => {
                                           dispatch(increament(cartItem.id));
-                                         
                                         }}
                                       >
                                         <i class="fas fa-plus"></i>
@@ -130,7 +135,12 @@ const getUserData = (event) => {
                                       </h6>
                                     </div>
                                     <a href="#!" style={{ color: "#cecece" }}>
-                                      <i className="fas fa-trash-alt" onClick={()=>dispatch(deletecart(cartItem.id))} />
+                                      <i
+                                        className="fas fa-trash-alt"
+                                        onClick={() =>
+                                          dispatch(deletecart(cartItem.id))
+                                        }
+                                      />
                                     </a>
                                   </div>
                                 </div>
@@ -154,28 +164,62 @@ const getUserData = (event) => {
                             {/* <p className="mb-2">&#2547;{totalPrice} BDT</p> */}
                           </div>
                           <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
-    <input type="email" name="name" value={userDetail.name} autoComplete="off" onChange={getUserData} class="form-control"  aria-describedby="emailHelp" placeholder="Enter your name"/>
-    </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Phone</label>
-    <input type="number" class="form-control" name="phone" autoComplete="off" onChange={getUserData}  value={userDetail.phone} aria-describedby="emailHelp" placeholder="Enter your phone"/>
-      </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Table No</label>
-    <input type="number" class="form-control" name="table_id" autoComplete="off" onChange={getUserData}  value={userDetail.table_id} aria-describedby="emailHelp" placeholder="Enter your table id"/>
- </div>
+                            <label for="exampleInputEmail1">Name</label>
+                            <input
+                              type="email"
+                              name="name"
+                              value={userDetail.name}
+                              autoComplete="off"
+                              onChange={getUserData}
+                              class="form-control"
+                              aria-describedby="emailHelp"
+                              placeholder="Enter your name"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Phone</label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              name="phone"
+                              autoComplete="off"
+                              onChange={getUserData}
+                              value={userDetail.phone}
+                              aria-describedby="emailHelp"
+                              placeholder="Enter your phone"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Table No</label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              name="table_id"
+                              autoComplete="off"
+                              onChange={getUserData}
+                              value={userDetail.table_id}
+                              aria-describedby="emailHelp"
+                              placeholder="Enter your table id"
+                            />
+                          </div>
                           <button
                             onClick={() => {
-                              if(cart.length<0||userDetail.name ==''|| userDetail.phone=='' || userDetail.table_id ==''){
-                           alert('Fill up all field')
-                              } else{
-                                dispatch(addOrder({userDetail,cart}));
-                                setUserdetail({ ...userDetail,  name: "",
-                                phone: "",
-                                table_id: "", });
+                              if (
+                                cart.length < 0 ||
+                                userDetail.name == "" ||
+                                userDetail.phone == "" ||
+                                userDetail.table_id == ""
+                              ) {
+                                alert("Fill up all field");
+                              } else {
+                                dispatch(addOrder({ userDetail, cart }));
+                                setUserdetail({
+                                  ...userDetail,
+                                  name: "",
+                                  phone: "",
+                                  table_id: "",
+                                });
                               }
-                             
                             }}
                             type="button"
                             className="cartb mt-5 btn  btn-block btn-lg"
@@ -201,5 +245,6 @@ const getUserData = (event) => {
     </>
   );
 };
+
 
 export default CartFood;
