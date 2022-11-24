@@ -83,9 +83,11 @@ background:#e1e1e1;
 		top: 8px;
 		font-size: 27px;
 		color: #0080cd;
+		cursor: pointer;
 	}
 
 	.nextSlide {
+		cursor: pointer;
 		right: -30px;
 		position: absolute;
 		top: 8px;
