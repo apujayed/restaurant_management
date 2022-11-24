@@ -29,7 +29,7 @@ const CartFood = () => {
     mode: "all"
   });
   const onSubmit = (data) => {
-    console.log({ data })
+    console.log(data)
     dispatch(addOrder({ data, cart }));
     reset()
   }

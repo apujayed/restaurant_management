@@ -17,11 +17,11 @@ export const getTodoAsync = () => async () => {
   }
 };
 
-export const addOrder = createAsyncThunk("post/getPost", async ({userDetail,cart}) => {
+export const addOrder = createAsyncThunk("post/getPost", async ({data,cart}) => {
 
 
   const response = await axios.post('http://localhost:3009/create',{
-    userDetail: userDetail,
+    data: data,
     cart: cart
   });
   console.log(response.data);
