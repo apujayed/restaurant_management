@@ -45,20 +45,21 @@ const FoodMenu = () => {
   }, []);
   return (
     <>
-    <AliceCarousel autoPlay autoPlayInterval="1500" infinite disableDotsControls disableButtonsControls>
-      <img src={banner} className="sliderimg"/>
-      <img src={banner} className="sliderimg"/>
-      <img src={banner} className="sliderimg"/>
-      <img src={banner} className="sliderimg"/>
-</AliceCarousel>
+      <AliceCarousel autoPlay autoPlayInterval="1500" infinite disableDotsControls disableButtonsControls>
+        <img src={banner} className="sliderimg" />
+        <img src={banner} className="sliderimg" />
+        <img src={banner} className="sliderimg" />
+        <img src={banner} className="sliderimg" />
+      </AliceCarousel>
       {/* <img src={banner} class="img-fluid banner" alt="Responsive image" /> */}
-        <div className="food-body">
-          <FilterMenu />
-          <div className="row">
-            <FoodItemContainer />
-            <CartFood />
-          </div>
+      <div className="food-body">
+
+        <FilterMenu />
+        <div className="row">
+          <FoodItemContainer />
+          <CartFood />
         </div>
+      </div>
       <Footer />
     </>
   );
