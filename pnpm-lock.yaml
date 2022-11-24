@@ -11,6 +11,7 @@ specifiers:
   '@reduxjs/toolkit': 1.4.0
   axios: ^1.1.3
   better-react-carousel: ^1.1.1
+  pusher-js: ^7.5.0
   react: 17.0.1
   react-alice-carousel: ^2.6.4
   react-animations: 1.0.0
@@ -38,6 +39,7 @@ dependencies:
   '@reduxjs/toolkit': 1.4.0
   axios: 1.2.0
   better-react-carousel: 1.1.1_l5bjqu5bpzmzwxnqdqomf7kqhy
+  pusher-js: 7.5.0
   react: 17.0.1
   react-alice-carousel: 2.6.6_react@17.0.1
   react-animations: 1.0.0
@@ -2387,6 +2389,10 @@ packages:
 
   /@types/minimatch/5.1.2:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
+    dev: false
+
+  /@types/node/14.18.33:
+    resolution: {integrity: sha512-qelS/Ra6sacc4loe/3MSjXNL1dNQ/GjxNHVzuChwMfmk7HuycRLVQN2qNY3XahK+fZc5E2szqQSKUyAF0E+2bg==}
     dev: false
 
   /@types/node/18.11.9:
@@ -9850,6 +9856,13 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
+  /pusher-js/7.5.0:
+    resolution: {integrity: sha512-R8eL3v2hnOC7NY8ufvrcDPdEjit//2pqVmcC7h1sUyoZQ4M+bwlwkszmMVuVbYNKZUS8WRFmSvdeb9LkfLyvZQ==}
+    dependencies:
+      '@types/node': 14.18.33
+      tweetnacl: 1.0.3
+    dev: false
+
   /q/1.5.1:
     resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
@@ -11807,6 +11820,10 @@ packages:
 
   /tweetnacl/0.14.5:
     resolution: {integrity: sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==}
+    dev: false
+
+  /tweetnacl/1.0.3:
+    resolution: {integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==}
     dev: false
 
   /type-check/0.3.2:
