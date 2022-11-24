@@ -8,13 +8,13 @@ const FilterMenu = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
   const [activeclass, setActiveClass] = useState();
+  const handleItemClick = (i) => {
+    setActiveClass(i)
+  }
   const [scrollX, setScrollX] = useState({
     side: ""
   });
   const scrollLeftRef = useRef();
-  const handleItemClick = (i) => {
-    setActiveClass(i)
-  }
   const handleScroll = (data) => {
     setScrollX(prev => ({ ...prev, side: data.side }));
   }
@@ -31,7 +31,7 @@ const FilterMenu = () => {
       <div className="row">
         <div className="col-sm-8">
           <div class="slide-sample">
-            <div id="slideRight" onClick={() => handleScroll({ side: "left" })} class="preSlide">
+            <div id="slideRight" onClick={() => handleScroll({ side: "left" })} className="preSlide">
               <i className="fas fa-caret-square-left" />
             </div>
             <div ref={scrollLeftRef} class="slideouter">
@@ -43,6 +43,7 @@ const FilterMenu = () => {
 
                         <Button
                           key={category.id}
+                          style={{ marginRight: "8px" }}
                           onClick={() => { dispatch(filterfood(category.name)); handleItemClick(i) }}
                           variant={activeclass === i ? "contained" : "outlined"}
                           size="medium"

@@ -78,17 +78,17 @@ background:#e1e1e1;
 	}
 
 	.preSlide {
-		left: -23px;
+		left: -31px;
 		position: absolute;
-		top: 11px;
+		top: 8px;
 		font-size: 27px;
 		color: #0080cd;
 	}
 
 	.nextSlide {
-		right: -24px;
+		right: -30px;
 		position: absolute;
-		top: 11px;
+		top: 8px;
 		font-size: 27px;
 		color: #0080cd;
 	}
