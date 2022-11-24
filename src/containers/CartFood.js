@@ -19,18 +19,6 @@ const CartFood = () => {
   const ui = useSelector((state) => state.ui);
   const dispatch = useDispatch();
   // const totalPrice = useSelector(cartTotalPriceSelector);
-  const [userDetail, setUserdetail] = useState({
-    name: "",
-    phone: "",
-    table_id: "",
-  });
-
-  let name, value;
-  const getUserData = (event) => {
-    name = event.target.name;
-    value = event.target.value;
-    setUserdetail({ ...userDetail, [name]: value });
-  };
 
   const {
     formState: { errors },
@@ -40,27 +28,10 @@ const CartFood = () => {
   } = useForm({
     mode: "all"
   });
-
-
-  console.log({ errors })
   const onSubmit = (data) => {
     console.log({ data })
-    if (
-      cart.length < 0 ||
-      userDetail.name == "" ||
-      userDetail.phone == "" ||
-      userDetail.table_id == ""
-    ) {
-      alert("Fill up all field");
-    } else {
-      dispatch(addOrder({ userDetail, cart }));
-      setUserdetail({
-        ...userDetail,
-        name: "",
-        phone: "",
-        table_id: "",
-      });
-    }
+    dispatch(addOrder({ data, cart }));
+    reset()
   }
 
   return (
