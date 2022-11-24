@@ -8,18 +8,22 @@ specifiers:
   '@mui/material': ^5.10.13
   '@mui/styles': ^5.10.10
   '@reduxjs/toolkit': 1.4.0
+  axios: ^1.1.3
   better-react-carousel: ^1.1.1
   react: 17.0.1
+  react-alice-carousel: ^2.6.4
   react-animations: 1.0.0
   react-dom: 17.0.0
   react-elastic-carousel: ^0.11.5
   react-hook-form: ^7.39.3
+  react-lazy-load-image-component: ^1.5.5
   react-redux: ^8.0.4
   react-router-dom: ^6.4.3
   react-scripts: 3.4.3
   react-slick: ^0.29.0
   react-styled-carousel: ^0.5.1
   styled-components: 5.2.1
+  sweetalert: ^2.1.2
   typescript: 3.8.3
 
 dependencies:
@@ -30,18 +34,22 @@ dependencies:
   '@mui/material': 5.10.13_s45wedzkw6kdle4y5rxd2rbmgy
   '@mui/styles': 5.10.10_react@17.0.1
   '@reduxjs/toolkit': 1.4.0
+  axios: 1.2.0
   better-react-carousel: 1.1.1_l5bjqu5bpzmzwxnqdqomf7kqhy
   react: 17.0.1
+  react-alice-carousel: 2.6.6_react@17.0.1
   react-animations: 1.0.0
   react-dom: 17.0.0_react@17.0.1
   react-elastic-carousel: 0.11.5_tu4ntx7bysz2coeca2jp3jcmnq
   react-hook-form: 7.39.3_react@17.0.1
+  react-lazy-load-image-component: 1.5.6_l5bjqu5bpzmzwxnqdqomf7kqhy
   react-redux: 8.0.5_l5bjqu5bpzmzwxnqdqomf7kqhy
   react-router-dom: 6.4.3_l5bjqu5bpzmzwxnqdqomf7kqhy
   react-scripts: 3.4.3_wlof3usj5zalkhvwtojk4sjxhq
   react-slick: 0.29.0_l5bjqu5bpzmzwxnqdqomf7kqhy
   react-styled-carousel: 0.5.1_4554q2zn2s4bsglqtluzeuobp4
   styled-components: 5.2.1_l5bjqu5bpzmzwxnqdqomf7kqhy
+  sweetalert: 2.1.2
 
 devDependencies:
   typescript: 3.8.3
@@ -3034,6 +3042,16 @@ packages:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: false
 
+  /axios/1.2.0:
+    resolution: {integrity: sha512-zT7wZyNYu3N5Bu0wuZ6QccIf93Qk1eV8LOewxgjOZFd2DenOs98cJ7+Y6703d0wkaXGY6/nZd4EweJaHz9uzQw==}
+    dependencies:
+      follow-redirects: 1.15.2_debug@4.3.4
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /axobject-query/2.2.0:
     resolution: {integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==}
     dev: false
@@ -5031,6 +5049,10 @@ packages:
       es6-symbol: 3.1.3
     dev: false
 
+  /es6-object-assign/1.1.0:
+    resolution: {integrity: sha512-MEl9uirslVwqQU369iHNWZXsI8yaZYGg/D65aOgZkeyFJwHYSxilf7rQzXKI7DdDuBPrBXbfk3sl9hJhmd5AUw==}
+    dev: false
+
   /es6-symbol/3.1.3:
     resolution: {integrity: sha512-NJ6Yn3FuDinBaBRWl/q5X/s4koRHBrgKAu+yGI6JCBeiu3qrcbJhwT2GeR/EXVfylRk8dpQVJoLEFhK+Mu31NA==}
     dependencies:
@@ -5850,6 +5872,15 @@ packages:
   /form-data/2.3.3:
     resolution: {integrity: sha512-1lLKB2Mu3aGP1Q/2eCOx0fNbRMe7XdwktwOruhfqqd0rIJWwN4Dh+E3hrPSlDCXnSR7UtZ1N38rVXm+6+MEhJQ==}
     engines: {node: '>= 0.12'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+    dev: false
+
+  /form-data/4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
+    engines: {node: '>= 6'}
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
@@ -7898,6 +7929,10 @@ packages:
       lodash._reinterpolate: 3.0.0
     dev: false
 
+  /lodash.throttle/4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+    dev: false
+
   /lodash.uniq/4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
     dev: false
@@ -9709,6 +9744,10 @@ packages:
       bluebird: 3.7.2
     dev: false
 
+  /promise-polyfill/6.1.0:
+    resolution: {integrity: sha512-g0LWaH0gFsxovsU7R5LrrhHhWAWiHRnh1GPrhXnPgYsDkIqjRYUYSZEsej/wtleDrz5xVSIDbeKfidztp2XHFQ==}
+    dev: false
+
   /promise/8.3.0:
     resolution: {integrity: sha512-rZPNPKTOYVNEEKFaq1HqTgOwZD+4/YHS5ukLzQCypkj+OkYx7iv0mA91lJlpPPZ8vMau3IIGj5Qlwrx+8iiSmg==}
     dependencies:
@@ -9737,6 +9776,10 @@ packages:
     dependencies:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
+    dev: false
+
+  /proxy-from-env/1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
     dev: false
 
   /prr/1.0.1:
@@ -9867,6 +9910,15 @@ packages:
       unpipe: 1.0.0
     dev: false
 
+  /react-alice-carousel/2.6.6_react@17.0.1:
+    resolution: {integrity: sha512-kQYajmtX1GsNPH8reRtYPBFVEubpClEgQ0xsb3ZRzl/UBwqn1Gzx1zOKgjBlYHgnCYArIIDb4ijbCTAfWRT1Iw==}
+    peerDependencies:
+      react: '>=15.4'
+    dependencies:
+      react: 17.0.1
+      vanilla-swipe: 2.4.1
+    dev: false
+
   /react-animations/1.0.0:
     resolution: {integrity: sha512-ePPpVgdKnNEXm+LP1ww5s3n0JzebBw9QdRfxRqogzeg1PDIn6kf0pmvgeTeVZQXXpGmHImkIeTiaQR1O6xjntA==}
     dev: false
@@ -9973,6 +10025,18 @@ packages:
 
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: false
+
+  /react-lazy-load-image-component/1.5.6_l5bjqu5bpzmzwxnqdqomf7kqhy:
+    resolution: {integrity: sha512-M0jeJtOlTHgThOfgYM9krSqYbR6ShxROy/KVankwbw9/amPKG1t5GSGN1sei6Cyu8+QJVuyAUvQ+LFtCVTTlKw==}
+    peerDependencies:
+      react: ^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x
+      react-dom: ^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x
+    dependencies:
+      lodash.debounce: 4.0.8
+      lodash.throttle: 4.1.1
+      react: 17.0.1
+      react-dom: 17.0.0_react@17.0.1
     dev: false
 
   /react-only-when/1.0.2_l5bjqu5bpzmzwxnqdqomf7kqhy:
@@ -11493,6 +11557,13 @@ packages:
       util.promisify: 1.0.1
     dev: false
 
+  /sweetalert/2.1.2:
+    resolution: {integrity: sha512-iWx7X4anRBNDa/a+AdTmvAzQtkN1+s4j/JJRWlHpYE8Qimkohs8/XnFcWeYHH2lMA8LRCa5tj2d244If3S/hzA==}
+    dependencies:
+      es6-object-assign: 1.1.0
+      promise-polyfill: 6.1.0
+    dev: false
+
   /symbol-tree/3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
     dev: false
@@ -11987,6 +12058,10 @@ packages:
     dependencies:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
+    dev: false
+
+  /vanilla-swipe/2.4.1:
+    resolution: {integrity: sha512-o6pfI0dipet88ZnPLV4Jx04Ia+U3xANh14vhROW2TOe/mrwk2JGG68+Z0BPoD1YUcQQEnK4SZBXkqFe+K1l7/w==}
     dev: false
 
   /vary/1.1.2:

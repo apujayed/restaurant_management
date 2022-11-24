@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import Nav from "../../components/Nav";
-import Cart from "../../containers/Cart";
+// import Cart from "../../containers/Cart";
 import FoodMenu from "../../containers/FoodMenu";
 /**
  *@function Home.jsx
@@ -9,14 +9,12 @@ import FoodMenu from "../../containers/FoodMenu";
  *
  **/
 
-const Home = (props) => {
+export default function Home() {
   return (
     <Box>
       <Nav />
       <FoodMenu />
-      <Cart />
+      {/* <Cart /> */}
     </Box>
   );
-};
-
-export default Home;
+}
