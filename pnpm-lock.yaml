@@ -4,6 +4,7 @@ specifiers:
   '@brainhubeu/react-carousel': ^2.0.4
   '@emotion/react': ^11.10.5
   '@emotion/styled': ^11.10.5
+  '@hookform/error-message': ^2.0.1
   '@mui/icons-material': ^5.10.9
   '@mui/material': ^5.10.13
   '@mui/styles': ^5.10.10
@@ -30,6 +31,7 @@ dependencies:
   '@brainhubeu/react-carousel': 2.0.4_l5bjqu5bpzmzwxnqdqomf7kqhy
   '@emotion/react': 11.10.5_react@17.0.1
   '@emotion/styled': 11.10.5_y7dfq5vlja522sjcvfnxx2ag7q
+  '@hookform/error-message': 2.0.1_xhn5n76qcgj2dxoxoo5aewogue
   '@mui/icons-material': 5.10.9_3k3npupnz4cst42v5zljugugke
   '@mui/material': 5.10.13_s45wedzkw6kdle4y5rxd2rbmgy
   '@mui/styles': 5.10.10_react@17.0.1
@@ -1767,6 +1769,18 @@ packages:
     deprecated: This version has been deprecated and is no longer supported or maintained
     dependencies:
       '@hapi/hoek': 8.5.1
+    dev: false
+
+  /@hookform/error-message/2.0.1_xhn5n76qcgj2dxoxoo5aewogue:
+    resolution: {integrity: sha512-U410sAr92xgxT1idlu9WWOVjndxLdgPUHEB8Schr27C9eh7/xUnITWpCMF93s+lGiG++D4JnbSnrb5A21AdSNg==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      react-hook-form: ^7.0.0
+    dependencies:
+      react: 17.0.1
+      react-dom: 17.0.0_react@17.0.1
+      react-hook-form: 7.39.3_react@17.0.1
     dev: false
 
   /@jest/console/24.9.0:

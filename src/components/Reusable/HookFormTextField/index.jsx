@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Controller } from "react-hook-form";
 import React from "react";
 import { TextField } from "@mui/material";
+import ErrorMessages from "../ErrorMessages";
 /**
  *@function HookFormTextField.jsx
  *@author Azim
@@ -57,7 +58,7 @@ const HookFormTextField = ({
           />
         )}
       />
-      {/* {errors && <ErrorMessages errors={errors} name={name} />} */}
+      {errors && <ErrorMessages errors={errors} name={name} />}
     </Fragment>
   );
 };
