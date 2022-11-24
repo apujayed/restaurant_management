@@ -1,4 +1,4 @@
-import React, { useEffect ,useState} from "react";
+import React, { useEffect, useState } from "react";
 import "../food.css";
 import banner from "../images/banner.png";
 import FilterMenu from "../components/FilterMenu";
@@ -18,31 +18,19 @@ const FoodMenu = () => {
   //   dispatch(fetchProducts());
   // }, [dispatch]);
 
- const [msg, setMsg] = useState([]);
- useEffect(()=>{
-  const pusher = new Pusher('4878a7a1d217f890b537', {
-    cluster: 'mt1',
-    encrypted: true
-  });
-  const channel = pusher.subscribe('chat');
-  channel.bind('message', data => {
-    alert('You have a new order')
-    dispatch(fetchProducts());
- 
-  });
- },[])
-
+  const [msg, setMsg] = useState([]);
   useEffect(() => {
-    const buttonRight = document.getElementById("slideRight");
-    const buttonLeft = document.getElementById("slideLeft");
+    const pusher = new Pusher('4878a7a1d217f890b537', {
+      cluster: 'mt1',
+      encrypted: true
+    });
+    const channel = pusher.subscribe('chat');
+    channel.bind('message', data => {
+      alert('You have a new order')
+      dispatch(fetchProducts());
 
-    buttonRight.onclick = function () {
-      document.getElementById("sidescrl").scrollLeft -= 200;
-    };
-    buttonLeft.onclick = function () {
-      document.getElementById("sidescrl").scrollLeft += 200;
-    };
-  }, []);
+    });
+  }, [])
   return (
     <>
       <AliceCarousel autoPlay autoPlayInterval="1500" infinite disableDotsControls disableButtonsControls>
