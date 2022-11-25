@@ -4,6 +4,7 @@ import categories from "../data/category";
 import { filterfood } from "../store/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Box, Button } from '@mui/material';
+
 const FilterMenu = () => {
   const dispatch = useDispatch();
   const dragabbleScrollRef = useRef();

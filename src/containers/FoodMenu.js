@@ -10,6 +10,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import Pusher from 'pusher-js';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../store/productsSlice";
+import SimpleBottomNavigation from '../components/BottomNav';
 const FoodMenu = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
@@ -48,6 +49,7 @@ const FoodMenu = () => {
           <CartFood />
         </div>
       </div>
+      <SimpleBottomNavigation />
       <Footer />
     </>
   );
