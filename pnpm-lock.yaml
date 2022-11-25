@@ -24,6 +24,7 @@ specifiers:
   react-scripts: 3.4.3
   react-slick: ^0.29.0
   react-styled-carousel: ^0.5.1
+  react-use-draggable-scroll: ^0.4.7
   styled-components: 5.2.1
   sweetalert: ^2.1.2
   typescript: 3.8.3
@@ -52,6 +53,7 @@ dependencies:
   react-scripts: 3.4.3_wlof3usj5zalkhvwtojk4sjxhq
   react-slick: 0.29.0_l5bjqu5bpzmzwxnqdqomf7kqhy
   react-styled-carousel: 0.5.1_4554q2zn2s4bsglqtluzeuobp4
+  react-use-draggable-scroll: 0.4.7_react@17.0.1
   styled-components: 5.2.1_l5bjqu5bpzmzwxnqdqomf7kqhy
   sweetalert: 2.1.2
 
@@ -10261,6 +10263,15 @@ packages:
       prop-types: 15.8.1
       react: 17.0.1
       react-dom: 17.0.0_react@17.0.1
+    dev: false
+
+  /react-use-draggable-scroll/0.4.7_react@17.0.1:
+    resolution: {integrity: sha512-6gCxGPO9WV5dIsBaDrgUKBaac8CY07PkygcArfajijYSNDwAq0girDRjaBuF1+lRqQryoLFQfpVaV2u/Yh6CrQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 17.0.1
     dev: false
 
   /react/17.0.1:
