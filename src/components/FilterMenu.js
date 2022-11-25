@@ -6,9 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Box, Button } from '@mui/material';
 const FilterMenu = () => {
   const dispatch = useDispatch();
-  const dragScrollRef = useRef();
+  const dragabbleScrollRef = useRef();
   const products = useSelector((state) => state.products);
-  const { events } = useDraggable(dragScrollRef);
+  const { events } = useDraggable(dragabbleScrollRef);
   const [activeclass, setActiveClass] = useState();
   const handleItemClick = (i) => {
     setActiveClass(i)
@@ -38,7 +38,7 @@ const FilterMenu = () => {
           <div ref={scrollLeftRef} class="slideouter">
             <div class="slideinner srcl">
               <ul  {...events}
-                ref={dragScrollRef}>
+                ref={dragabbleScrollRef}>
                 {
                   categories.map((category, i) => {
                     return (
