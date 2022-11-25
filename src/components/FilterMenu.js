@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useDraggable } from "react-use-draggable-scroll";
 import categories from "../data/category";
 import { filterfood } from "../store/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Box, Button } from '@mui/material';
 const FilterMenu = () => {
   const dispatch = useDispatch();
+  const dragScrollRef = useRef();
   const products = useSelector((state) => state.products);
+  const { events } = useDraggable(dragScrollRef);
   const [activeclass, setActiveClass] = useState();
   const handleItemClick = (i) => {
     setActiveClass(i)
@@ -34,7 +37,8 @@ const FilterMenu = () => {
           </div>
           <div ref={scrollLeftRef} class="slideouter">
             <div class="slideinner srcl">
-              <ul>
+              <ul  {...events}
+                ref={dragScrollRef}>
                 {
                   categories.map((category, i) => {
                     return (
