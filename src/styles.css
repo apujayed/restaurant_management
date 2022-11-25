@@ -6,20 +6,17 @@
 	 max-width: 1100px;
 	 margin: 10px auto;
 }
-
 .slideinner::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
-
 	a {
 		text-decoration: none;
 		font-weight: bold;
 	}
 
-.outer{border: 1px solid;}
-
-
-
+.outer{
+	border: 1px solid;
+}
 	.slide-sample{
 		margin: auto;
 		position: relative;
