@@ -37,7 +37,7 @@ const FilterMenu = () => {
           </div>
           <div ref={scrollLeftRef} class="slideouter">
             <div class="slideinner srcl">
-              <ul  {...events}
+              <ul style={{ overflowX: "auto" }}  {...events}
                 ref={dragabbleScrollRef}>
                 {
                   categories.map((category, i) => {

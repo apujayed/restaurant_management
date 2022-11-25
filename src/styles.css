@@ -6,33 +6,12 @@
 } */
 
 .slideinner ul{
-	margin-left: -32px !important;
+	/* margin-left: -32px !important; */
 	align-items: center;
 	justify-content: center;
-	display: flex;
+	/* display: flex; */
 	margin-bottom: 10px;
 }
-.slideinner ul li{
-	list-style: none;
-	background-color: #eee;
-	padding: 8px 20px;
-	margin: 5px;
-	letter-spacing: 1px;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.food-body ul li.active{
-background-color: #ff5700;
-color: #fff;
-}
-.food-body ul li:hover{
-	transition: all 0.3s ease;
-	background-color: #ff5700;
-	color: #fff;
-	}
-
-
 
 	a {
 		text-decoration: none;
