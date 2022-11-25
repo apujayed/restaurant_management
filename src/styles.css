@@ -1,12 +1,10 @@
 
 .slideinner{
-	/* margin-left: -32px !important; */
-	align-items: center;
-	justify-content: center;
-	/* display: flex; */
 	margin-bottom: 10px;
 	overflow-x: auto;
 	 scrollbar-width: none;
+	 max-width: 1100px;
+	 margin: 10px auto;
 }
 
 .slideinner::-webkit-scrollbar {
@@ -20,22 +18,7 @@
 
 .outer{border: 1px solid;}
 
-.srcl {
-		display: flex;
-		margin: auto;
-		width: 1100px;
-		margin: 10px auto;
-		justify-content: space-between;
-	}
 
-/* .srcl div {
-		border: 1px solid #888;
-		padding: 5px;
-		width: 80px;
-		position: relative;
-  margin-right:5px;
-background:#e1e1e1;
-	} */
 
 	.slide-sample{
 		margin: auto;

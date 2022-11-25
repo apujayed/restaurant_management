@@ -37,7 +37,7 @@ const FilterMenu = () => {
           </div>
           <div ref={scrollLeftRef} class="slideouter">
             <div {...events}
-              ref={dragabbleScrollRef} class="slideinner srcl">
+              ref={dragabbleScrollRef} class="slideinner">
 
               {
                 categories.map((category, i) => {
