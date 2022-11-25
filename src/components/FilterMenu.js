@@ -36,24 +36,24 @@ const FilterMenu = () => {
             <i className="fas fa-caret-square-left" />
           </div>
           <div ref={scrollLeftRef} class="slideouter">
-            <div class="slideinner srcl">
-              <ul style={{ overflowX: "auto" }}  {...events}
-                ref={dragabbleScrollRef}>
-                {
-                  categories.map((category, i) => {
-                    return (
-                      <Button
-                        key={category.id}
-                        style={{ marginRight: "8px" }}
-                        onClick={() => { dispatch(filterfood(category.name)); handleItemClick(i) }}
-                        variant={activeclass === i ? "contained" : "outlined"}
-                        size="medium"
-                      >
-                        {category.name}
-                      </Button>
-                    )
-                  })}
-              </ul>
+            <div {...events}
+              ref={dragabbleScrollRef} class="slideinner srcl">
+
+              {
+                categories.map((category, i) => {
+                  return (
+                    <Button
+                      key={category.id}
+                      style={{ marginRight: "8px" }}
+                      onClick={() => { dispatch(filterfood(category.name)); handleItemClick(i) }}
+                      variant={activeclass === i ? "contained" : "outlined"}
+                      size="medium"
+                    >
+                      {category.name}
+                    </Button>
+                  )
+                })}
+
             </div>
           </div>
           <div onClick={() => handleScroll({ side: "right" })} className="nextSlide">

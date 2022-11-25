@@ -1,16 +1,16 @@
-/* .slideinner{
-	width: 200px;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	white-space: nowrap;
-} */
 
-.slideinner ul{
+.slideinner{
 	/* margin-left: -32px !important; */
 	align-items: center;
 	justify-content: center;
 	/* display: flex; */
 	margin-bottom: 10px;
+	overflow-x: auto;
+	 scrollbar-width: none;
+}
+
+.slideinner::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
 }
 
 	a {
@@ -28,14 +28,14 @@
 		justify-content: space-between;
 	}
 
-.srcl div {
+/* .srcl div {
 		border: 1px solid #888;
 		padding: 5px;
 		width: 80px;
 		position: relative;
   margin-right:5px;
 background:#e1e1e1;
-	}
+	} */
 
 	.slide-sample{
 		margin: auto;
