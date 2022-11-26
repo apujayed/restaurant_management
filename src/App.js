@@ -23,8 +23,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
 `;
-
-
 const router = createBrowserRouter([
   {
     path: "/",

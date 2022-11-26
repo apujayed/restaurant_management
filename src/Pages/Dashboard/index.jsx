@@ -141,6 +141,7 @@ function DashboardContent() {
               px: [1],
             }}
           >
+            <h4>Royal Food</h4>
             <IconButton onClick={toggleDrawer}>
               <ChevronLeftIcon />
             </IconButton>
