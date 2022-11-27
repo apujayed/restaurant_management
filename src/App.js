@@ -22,7 +22,13 @@ const GlobalStyle = createGlobalStyle`
     font-size:14px;
   }
 
-`;
+`
+  ;
+
+const getData = () => {
+  console.log("azim")
+}
+getData()
 const router = createBrowserRouter([
   {
     path: "/",

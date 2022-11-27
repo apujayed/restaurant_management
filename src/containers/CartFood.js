@@ -9,10 +9,10 @@ import {
   clear,
   deletecart,
 } from "../store/cartSlice";
-import { HookFormTextField } from '../components/Reusable';
 import { Box } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { formConrtol } from '../data/homeFormControl';
+import FormsGrouped from '../components/Reusable/FormsGrouped';
 // import { cartTotalPriceSelector } from "../store/selectors";
 const CartFood = () => {
   const cart = useSelector((state) => state.cart.cart_data);
@@ -36,7 +36,7 @@ const CartFood = () => {
 
   return (
     <>
-     
+
       <div className="col-lg-4 col-xs-4 col-12">
         {/* <button onClick={() => dispatch(getTodoAsync())}>GET TODO</button> */}
 
@@ -128,7 +128,7 @@ const CartFood = () => {
                                         class="btn btn-link px-2"
                                         onClick={() => {
                                           dispatch(increament(cartItem.id));
-                                         
+
                                         }}
                                       >
                                         <i class="fas fa-plus"></i>
@@ -174,18 +174,7 @@ const CartFood = () => {
                           <form
                             onSubmit={handleSubmit(onSubmit)}
                           >
-                            {
-                              formConrtol.map(item =>
-                                <Box key={item.name}>
-                                  <label for="name">{item.label}</label>
-                                  <HookFormTextField
-                                    name={item.name}
-                                    label={item.formLabel}
-                                    control={control}
-                                    errors={errors}
-                                  />
-                                </Box>)
-                            }
+                            <FormsGrouped mapedForm={formConrtol} control={control} errors={errors} />
                             <button
                               type="submit"
                               className="cartb mt-5 btn  btn-block btn-lg"

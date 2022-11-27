@@ -8,7 +8,7 @@ import ErrorMessages from "../ErrorMessages";
  *@author Azim
  *
  **/
-const HookFormTextField = ({
+export default function ({
   rows,
   control,
   defaultValue,
@@ -23,7 +23,7 @@ const HookFormTextField = ({
   errors,
   InputProps,
   ...rest
-}) => {
+}) {
   return (
     <Fragment>
       <Controller
@@ -61,9 +61,9 @@ const HookFormTextField = ({
       {errors && <ErrorMessages errors={errors} name={name} />}
     </Fragment>
   );
-};
+}
 
-export default HookFormTextField;
+// export default HookFormTextField;
 // {
 //   "compilerOptions": {
 //     "jsx": "react",
