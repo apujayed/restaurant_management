@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../store/cartSlice";
 import { fetchProducts } from "../store/productsSlice";
@@ -6,6 +6,7 @@ import Spinner from "../components/Spinner";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import icon from "../images/grey-star.svg";
 import Modal from "../components/Modal";
+import { Grid } from '@mui/material';
 const FoodItemContainer = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
@@ -15,29 +16,27 @@ const FoodItemContainer = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
   const [displayModal, setDisplayModal] = useState(false);
-const [modalData, setModaldata] = useState([]);
+  const [modalData, setModaldata] = useState([]);
   return (
     <>
- {/* {console.log(modalData)} */}
-      <div className="col-lg-8 col-xs-6">
-    
-      <Modal
-      displayModal={displayModal}
-      setDisplayModal={setDisplayModal}
-      modalData={modalData}
-      />
-        <div className="row allproduct">
-        {products.loading && <Spinner/>}
-          {filterproduct.length>0&&filterproduct.map((product) => {
+      <Grid item md={8} sm={6} xs={6}>
+        <Modal
+          displayModal={displayModal}
+          setDisplayModal={setDisplayModal}
+          modalData={modalData}
+        />
+        <Grid container className="allproduct">
+          {products.loading && <Spinner />}
+          {filterproduct.length > 0 && filterproduct.map((product) => {
             return (
-              <div key={product.id} className="col-lg-4 col-xs-6">
+              <Grid item md={4} sm={6} xs={6} key={product.id}>
                 <div className="food-card food-card--vertical bg-white rounded-lg overflow-hidden mb-4 shadow">
                   <div className="food-card_img position-relative">
-                  {/* <span class="badge-overlaystrip ">H</span> */}
-                  <LazyLoadImage src={product.cover}
-        className="food-image" 
-        alt="Image Alt"
-      />
+                    {/* <span class="badge-overlaystrip ">H</span> */}
+                    <LazyLoadImage src={product.cover}
+                      className="food-image"
+                      alt="Image Alt"
+                    />
                     {/* <img className="food-image" src={product.cover} alt="" /> */}
                     {/* <a href="#!">
                       <i className="far fa-heart" />
@@ -62,7 +61,7 @@ const [modalData, setModaldata] = useState([]);
                               style={{ width: "86%" }}
                             />
                           </div>
-                          
+
                           <a href="#!" className="text-muted">
                             <small>2,144 Reviews</small>
                           </a>
@@ -76,14 +75,14 @@ const [modalData, setModaldata] = useState([]);
                           Cooking Time - {product.time} Min
                         </div>
                         <div>
-                          <p onClick={()=> {
+                          <p onClick={() => {
                             setModaldata({
-                              img:product.cover,
-                              ingredients:product.ingredients
+                              img: product.cover,
+                              ingredients: product.ingredients
                             });
                             setDisplayModal(!displayModal);
 
-                           
+
                           }} className="badge badge-success">See more</p>
                         </div>
                       </div>
@@ -94,31 +93,31 @@ const [modalData, setModaldata] = useState([]);
                         </div>
 
                         <button
-                         data-mdb-toggle="tooltip" title="Press to add cart"
+                          data-mdb-toggle="tooltip" title="Press to add cart"
                           type="button"
-                          onClick={()=> {
-                             dispatch(addToCart(product));
+                          onClick={() => {
+                            dispatch(addToCart(product));
 
                           }}
-                        
+
                           class="cartb btn  btn-rounded "
                         >
                           Add To Cart
                         </button>
-                        
+
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Grid>
             );
-          
-          
+
+
           })
-        
-        }
-        </div>
-      </div>
+
+          }
+        </Grid>
+      </Grid>
     </>
   );
 };

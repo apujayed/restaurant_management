@@ -13,6 +13,7 @@ import { Box } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { formConrtol } from '../data/homeFormControl';
 import FormsGrouped from '../components/Reusable/FormsGrouped';
+import { Grid } from '@mui/material';
 // import { cartTotalPriceSelector } from "../store/selectors";
 const CartFood = () => {
   const cart = useSelector((state) => state.cart.cart_data);
@@ -37,7 +38,7 @@ const CartFood = () => {
   return (
     <>
 
-      <div className="col-lg-4 col-xs-4 col-12">
+      <Grid item md={4} sm={6} xs={6}>
         {/* <button onClick={() => dispatch(getTodoAsync())}>GET TODO</button> */}
 
         <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
@@ -196,7 +197,7 @@ const CartFood = () => {
             </div>
           </div>
         </section>
-      </div>
+      </Grid>
     </>
   );
 };
