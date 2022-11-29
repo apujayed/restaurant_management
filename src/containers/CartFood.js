@@ -42,12 +42,13 @@ const CartFood = () => {
         {/* <button onClick={() => dispatch(getTodoAsync())}>GET TODO</button> */}
         <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
           <div className="">
-            <div className="row d-flex justify-content-center align-items-center h-100">
+            {/* need to change css */}
+            <Grid container display="flex" justifyContent={"center"} alignItems="center" height={"100vh"}>
               <div className="col">
                 <div className="card">
                   <div className="card-body p-4">
-                    <div className="row">
-                      <div className="col-lg-12">
+                    <Grid container >
+                      <Grid lg={12}>
                         <div className="d-flex justify-content-between">
                           <h5 className="mb-3 d-flex">
                             <a href="#!" className="text-body">
@@ -188,12 +189,12 @@ const CartFood = () => {
                             </button>
                           </form>
                         </div>
-                      </div>
-                    </div>
+                      </Grid>
+                    </Grid>
                   </div>
                 </div>
               </div>
-            </div>
+            </Grid>
           </div>
         </section>
       </Grid>
