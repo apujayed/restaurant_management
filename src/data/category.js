@@ -20,7 +20,7 @@ const categories = [
         status: 'active'
     },
     {
-        id: 1,
+        id: 134321,
         name: 'PLATTER',
         status: 'active'
     },

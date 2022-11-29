@@ -1,5 +1,6 @@
 
 .slideinner{
+	scroll-behavior: smooth;
 	margin-bottom: 10px;
 	overflow-x: auto;
 	 scrollbar-width: none;
