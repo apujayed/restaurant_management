@@ -44,7 +44,7 @@ const FilterMenu = () => {
                 categories.map((category, i) => {
                   return (
                     <Button
-                      key={category.id}
+                      key={i}
                       style={{ marginRight: "8px" }}
                       onClick={() => { dispatch(filterfood(category.name)); handleItemClick(i) }}
                       variant={activeclass === i ? "contained" : "outlined"}

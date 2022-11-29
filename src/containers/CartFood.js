@@ -40,7 +40,6 @@ const CartFood = () => {
 
       <Grid item md={4} sm={6} xs={6}>
         {/* <button onClick={() => dispatch(getTodoAsync())}>GET TODO</button> */}
-
         <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
           <div className="">
             <div className="row d-flex justify-content-center align-items-center h-100">
