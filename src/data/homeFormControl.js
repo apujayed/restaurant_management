@@ -2,13 +2,13 @@ export const formConrtol = [
     {
         label: "Name",
         name: "name",
-        formLabel: "Enter your name",
+        formlabel: "Enter your name",
 
     },
     {
         label: "Phone",
         name: "phone",
-        formLabel: "Enter your phone",
+        formlabel: "Enter your phone",
         rules: {
             maxLength: {
                 value: 13,
@@ -23,6 +23,6 @@ export const formConrtol = [
     {
         label: "Table No",
         name: "table_id",
-        formLabel: "Enter your table Id"
+        formlabel: "Enter your table Id"
     },
 ]

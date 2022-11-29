@@ -51,7 +51,7 @@ export default function ({
             multiline={type === "date" || type === "number" ? false : true}
             autoComplete={type === "password" ? "true" : "false"}
             className={className}
-            label={label}
+            label={rest.formlabel}
             variant={variant ? variant : "outlined"}
             type={type ? type : "text"}
             InputProps={InputProps}
@@ -62,14 +62,3 @@ export default function ({
     </Fragment>
   );
 }
-
-// export default HookFormTextField;
-// {
-//   "compilerOptions": {
-//     "jsx": "react",
-//     "baseUrl": ".",
-//     "paths": {
-//       "@components/*": ["./src/components/*"]
-//     }
-//   }
-// }
