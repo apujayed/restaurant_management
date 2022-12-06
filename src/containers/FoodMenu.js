@@ -41,11 +41,10 @@ const FoodMenu = () => {
         <img src={banner} className="sliderimg" />
         <img src={banner} className="sliderimg" />
       </AliceCarousel>
-      {/* <img src={banner} class="img-fluid banner" alt="Responsive image" /> */}
       <div className="food-body">
 
         <FilterMenu />
-        <Grid container>
+        <Grid container spacing={2}>
           <FoodItemContainer />
           <CartFood />
         </Grid>

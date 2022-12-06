@@ -11,23 +11,6 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
 
   return (
-    <>
-
-
-    {/* <Box sx={{ width: 500 }}>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Cart" icon={<AddShoppingCartIcon />} />
-      </BottomNavigation>
-    </Box> */}
-
       <Box sx={{ pb: 7 }}>
       <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
       <BottomNavigation
@@ -43,6 +26,5 @@ export default function SimpleBottomNavigation() {
       </BottomNavigation>
       </Paper>
     </Box>
-    </>
   );
 }

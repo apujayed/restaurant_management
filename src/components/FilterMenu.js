@@ -63,19 +63,6 @@ const FilterMenu = () => {
 
         </div>
       </Grid>
-      <Grid item md={4} sm={4} paddingY={3} display="flex" justifyContent={"center"} alignItems="center" id="search"
-      >
-        <Grid container >
-          <Grid item md={8} sm={8} >
-            <input type="text" className="form-control" value="" />
-          </Grid>
-          <Grid item md={4} sm={4} >
-            <button type="button" class="btn btn-primary">
-              Search
-            </button>
-          </Grid>
-        </Grid>
-      </Grid>
     </Grid>
   );
 };

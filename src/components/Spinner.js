@@ -1,15 +1,15 @@
 import React from 'react'
+import { CircularProgress, Backdrop } from '@mui/material'
 
 const Spinner = () => {
   return (
-    <>
-    <div className='spin-cont'>
-    <div class="spin spinner-border " role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-    </div>
-   
-    </>
+<Backdrop
+  sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 100 }}
+  open={true}
+  // onClick={handleClose}
+>
+  <CircularProgress color="inherit" />
+</Backdrop>
   )
 }
 

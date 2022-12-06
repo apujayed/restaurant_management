@@ -9,7 +9,6 @@ import {
   clear,
   deletecart,
 } from "../store/cartSlice";
-import { Box } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { formConrtol } from '../data/homeFormControl';
 import FormsGrouped from '../components/Reusable/FormsGrouped';
@@ -38,12 +37,11 @@ const CartFood = () => {
   return (
     <>
 
-      <Grid item md={4} sm={12} xs={12}>
-        {/* <button onClick={() => dispatch(getTodoAsync())}>GET TODO</button> */}
+      <Grid zIndex={"-200"} item md={4} sm={12} xs={12}>
         <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
           <div className="">
             {/* need to change css */}
-            <Grid container display="flex" justifyContent={"center"} alignItems="center" height={"100vh"}>
+            <Grid container display="flex" justifyContent={"center"} alignItems="center">
               <div className="col">
                 <div className="card">
                   <div className="card-body p-4">
