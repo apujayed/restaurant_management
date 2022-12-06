@@ -5,7 +5,8 @@ import { filterfood } from "../store/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Box, Button } from '@mui/material';
 import { Grid } from '@mui/material';
-
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 const FilterMenu = () => {
   const dispatch = useDispatch();
   const dragabbleScrollRef = useRef();
@@ -35,7 +36,8 @@ const FilterMenu = () => {
       <Grid item sm={8} md={8} >
         <div class="slide-sample">
           <div onClick={() => handleScroll({ side: "left" })} className="preSlide">
-            <i className="fas fa-caret-square-left" />
+            {/* <i className="fas fa-caret-square-left" /> */}
+            <KeyboardArrowLeftIcon/>
           </div>
           <div ref={scrollLeftRef} class="slideouter">
             <div {...events}
@@ -58,7 +60,7 @@ const FilterMenu = () => {
             </div>
           </div>
           <div onClick={() => handleScroll({ side: "right" })} className="nextSlide">
-            <i className="fas fa-caret-square-right" />
+            <KeyboardArrowRightIcon/>
           </div>
 
         </div>

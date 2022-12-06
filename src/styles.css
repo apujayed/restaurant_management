@@ -22,7 +22,7 @@
 
 
 	.slide-sample{
-		margin: auto;
+		/* margin: auto; */
 		position: relative;
 		display: table;
 	}
@@ -73,6 +73,18 @@
 @media only screen and (max-width: 600px) {
 	.slideouter {
 	 width: 390px;
+	}
+	#search { display: none; }
+
+  }
+@media only screen and (max-width: 600px) {
+	.slideouter {
+	 width: 390px;
+	}
+	.slide-sample{
+		margin: auto;
+		position: relative;
+		display: table;
 	}
 	#search { display: none; }
 
