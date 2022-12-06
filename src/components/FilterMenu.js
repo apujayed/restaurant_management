@@ -7,6 +7,7 @@ import { Box, Button } from '@mui/material';
 import { Grid } from '@mui/material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import { Divider } from '@mui/material';
 const FilterMenu = () => {
   const dispatch = useDispatch();
   const dragabbleScrollRef = useRef();
@@ -35,8 +36,8 @@ const FilterMenu = () => {
     <Grid container>
       <Grid item sm={8} md={8} >
         <div class="slide-sample">
+          <div>
           <div onClick={() => handleScroll({ side: "left" })} className="preSlide">
-            {/* <i className="fas fa-caret-square-left" /> */}
             <KeyboardArrowLeftIcon/>
           </div>
           <div ref={scrollLeftRef} class="slideouter">
@@ -62,8 +63,10 @@ const FilterMenu = () => {
           <div onClick={() => handleScroll({ side: "right" })} className="nextSlide">
             <KeyboardArrowRightIcon/>
           </div>
+       </div>
 
         </div>
+        <Divider />
       </Grid>
     </Grid>
   );

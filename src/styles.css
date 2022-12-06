@@ -24,7 +24,9 @@
 	.slide-sample{
 		/* margin: auto; */
 		position: relative;
-		display: table;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
 	}
 /* .header-content{
 	display: flex;
@@ -41,9 +43,9 @@
 	}
 
 	.preSlide {
-		left: -31px;
+		left: -25px;
 		position: absolute;
-		top: 8px;
+		top: 4px;
 		font-size: 27px;
 		color: #0080cd;
 		cursor: pointer;
@@ -51,9 +53,9 @@
 
 	.nextSlide {
 		cursor: pointer;
-		right: -30px;
 		position: absolute;
-		top: 8px;
+		top: 4px;
+		right: 490px;
 		font-size: 27px;
 		color: #0080cd;
 	}
