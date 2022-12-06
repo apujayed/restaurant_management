@@ -83,7 +83,7 @@ const Nav = () => {
         }}
       >
         {/* <Bubble change={change}>{total}</Bubble> */}
-        <IconButton>
+        <IconButton style={{color:"white"}}>
         <AddShoppingCartIcon/>
      </IconButton>
       </NavIconWrapper>

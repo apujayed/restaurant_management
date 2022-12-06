@@ -9,6 +9,7 @@ import {
   clear,
   deletecart,
 } from "../store/cartSlice";
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { useForm } from 'react-hook-form';
 import { formConrtol } from '../data/homeFormControl';
 import FormsGrouped from '../components/Reusable/FormsGrouped';
@@ -50,7 +51,8 @@ const CartFood = () => {
                         <div className="d-flex justify-content-between">
                           <h5 className="mb-3 d-flex">
                             <a href="#!" className="text-body">
-                              <i className="fas fa-long-arrow-alt-left me-2" />
+                              {/* <i className="fas fa-long-arrow-alt-left me-2" /> */}
+<KeyboardArrowLeftIcon/>
                               Your Cart
                             </a>
                           </h5>
