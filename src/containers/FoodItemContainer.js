@@ -19,17 +19,17 @@ const FoodItemContainer = () => {
   const [modalData, setModaldata] = useState([]);
   return (
     <>
-      <Grid item md={8} sm={6} xs={6}>
+      <Grid item md={8} sm={12} xs={12}>
         <Modal
           displayModal={displayModal}
           setDisplayModal={setDisplayModal}
           modalData={modalData}
         />
-        <Grid container className="allproduct">
+        <Grid container spacing={2} className="allproduct">
           {products.loading && <Spinner />}
           {filterproduct.length > 0 && filterproduct.map((product) => {
             return (
-              <Grid item md={4} sm={6} xs={6} key={product.id}>
+              <Grid item md={4} sm={12} xs={12} key={product.id}>
                 <div className="food-card food-card--vertical bg-white rounded-lg overflow-hidden mb-4 shadow">
                   <div className="food-card_img position-relative">
                     {/* <span class="badge-overlaystrip ">H</span> */}

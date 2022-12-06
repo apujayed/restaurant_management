@@ -51,7 +51,7 @@ const FoodMenu = () => {
         </Grid>
       </div>
       <SimpleBottomNavigation />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

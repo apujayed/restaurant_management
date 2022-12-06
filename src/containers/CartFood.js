@@ -38,7 +38,7 @@ const CartFood = () => {
   return (
     <>
 
-      <Grid item md={4} sm={6} xs={6}>
+      <Grid item md={4} sm={12} xs={12}>
         {/* <button onClick={() => dispatch(getTodoAsync())}>GET TODO</button> */}
         <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
           <div className="">
